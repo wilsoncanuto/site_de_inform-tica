@@ -1,0 +1,43 @@
+<html>
+<head>
+<meta charset='utf-8'>
+<link rel='stylesheet' href='estilos/cadastro.css'>
+</head>
+<body>
+<body background="imagens/14.jpg"></body>
+<center><h1>FORMULÁRIO</h1></center>
+
+<form action='incluir.jsp' method='post'>
+<div>
+<label for='txtNome'>Nome</label>
+<input class='entrada' type='text' name='txtNome' size='40' maxlength='40' autofocus required onkeyup="maiuscula(this);">
+</div>
+
+<div>
+<label>Cargo</label>
+<input class='entrada' type='text' name='txtCargo' size='30' maxlength='30' required>
+</div>
+
+<div>
+<label for='txtDtAniv'> Dt. Nascimento</label>
+<input class='entrada' type='date' name='txtDtAniv'>
+</div>
+
+<div>
+<label>Salario</label>
+<input class='entrada' type='number' name='txtSalario' size='12' maxlength='12' >
+</div>
+
+<input type='submit' class='btn' value='Adicionar'>
+<input type="button" class='btn' Value ="Menu" onclick=location.href="index.html">
+</form>
+
+<script>
+function maiuscula(z){
+ v = z.value.toUpperCase();
+ z.value = v;
+    }
+</script>	
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<html>
+<head>
+<meta charset='utf-8'>
+<body background="imagens/14.jpg"></body>
+<style>
+form{
+border:8px solid rgb(91, 91, 103);
+padding:20px;
+width:35%;
+margin:30px auto;
+}
+
+.area{
+margin-bottom:20px;
+}
+
+.btn{
+width:100px;
+padding:6px;
+margin-left:30px;
+cursor:pointer;
+border-radius:5px;
+}
+
+.sairForm{
+width:100%;
+margin:20px 8%;
+}
+
+#idNome{
+display:none;
+}
+
+</style>
+
+</head>
+<body>
+<center><h1>ACESSÓRIOS PARA INFORMÁTICA</h1></center>
+
+<form action='consulta.jsp' method='get'>
+
+
+	<div class='area'>
+	  <input type="radio" id="optRA" name="opt" checked value="M" onclick="acao('pesqRA')">
+	  <label class='rd' for="optRA">RA</label>
+	   
+	  <input type="radio" id="optNome"   name="opt" value="N" onclick="acao('pesqnome')">
+	  <label class='rd' for="optNome">Nome</label>
+	</div>
+	
+	<input id='idRA' type='number' name='txtRA' size='12' maxlength= '12'>
+	<input id='idNome' type='text' name='txtNome' size='40' maxlength= '40' onkeyup="maiuscula(this);">
+	
+    <div class='sairForm'>
+	<input type='submit' class='btn' value='Consultar'>
+	<input type="button" class='btn' Value ="Menu" onclick=location.href="index.html">
+	</div>
+</div>
+</form>
+<script>
+
+function acao(tipo) {
+	if(tipo=="pesqRA") {
+	document.getElementById('idRA').style.display='block';
+	document.getElementById('idNome').style.display='none';
+	}
+	else if(tipo=="pesqnome") {
+	document.getElementById('idRA').style.display='none';
+	document.getElementById('idNome').style.display='block';
+	}
+}
+
+function maiuscula(z){
+ v = z.value.toUpperCase();
+ z.value = v;
+    }
+	
+	
+	
+</script>
+
+</body>
+</html>
